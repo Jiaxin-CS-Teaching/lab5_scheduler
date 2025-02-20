@@ -352,22 +352,25 @@ sched2(void)
 {
   struct proc *p;
 
-  //default highest priority
-  //if no process's priority is explicitly set by us(test program)
-  //all of the processes have the same default priority (10)
+  //a new attribute "priority" for each process has been added
+  //you can retrieve a process p' priority value by "p->priority"
+
+  //define the default highest priority
+  //if the priority is not explicitly set by us(test program)
+  //all of the processes should have the same initialized priority (10)
   //so the current highest among them is 10
   int highest_priority = 10;
-
-  //clear the compiler warning about unused variable
-  //you will need to remove this line when completing your code
-  (void)highest_priority;
 
   //TODO: traverse ptable to find the highest priority among all RUNNABLE processes.
   // Note: In our design, lower the priority value, higher the actual priority (e.g, 0 is the highest, 10 is the lowest)
   // So if a process has a lower priority value, the variable highest_priority should be updated.
 
   //TODO: traverse ptable again, select the first RUNNABLE process whose priority matches highest_priority
-  //Once found, run the dispatcher code
+  //Once found, copy/paste the dispatcher code right after
+
+  //clear the compiler warning about unused variable
+  //you will need to remove this line when completing your code
+  (void)highest_priority;
 
 
   //for fixing 100% cpu issue, do NOT touch
